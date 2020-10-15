@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React  from 'react';
 import './App.css';
 import Sidebar from "./Sidebar";
 import Chat from "./Chat";
@@ -8,9 +8,10 @@ import {
     Route,
 } from "react-router-dom";
 import Login from "./Login";
+import {useUser} from "./UserProvider";
 
 function App() {
-    const [user, setUser] = useState(null);
+    const user = useUser();
     return (
 
         <div className="app">
